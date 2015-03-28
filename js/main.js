@@ -13,7 +13,7 @@ var ComicApp = React.createClass({
     render: function () {
         return (
             <div>
-                <h1>Comic Viewer</h1>
+                <h1>Comic Viewer ({this.state.comicList.length})</h1>
                 <ComicAdder onSubmit={this._addComic}/>
                 <ul>
                     {this.state.comicList.map(function (comic) {

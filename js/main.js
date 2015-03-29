@@ -45,6 +45,10 @@ var ComicApp = React.createClass({
 
 var ComicElement = React.createClass({
 
+    shouldComponentUpdate: function (nextProps) {
+        return this.props.comic.title != nextProps.comic.title;
+    },
+
     render: function () {
         return (
             <img
